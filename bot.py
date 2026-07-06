@@ -25,7 +25,8 @@ def load_seen():
 def save_seen(data):
     with open(SEEN_FILE, "w") as f:
         json.dump(list(data), f)
-      def get_tickers():
+        
+def get_tickers():
     r = requests.get(URL, headers=HEADERS, timeout=30)
     soup = BeautifulSoup(r.text, "lxml")
 
@@ -50,6 +51,7 @@ def send_message(text):
         },
         timeout=30
     )
+    
 def main():
     seen = load_seen()
     current = set(get_tickers())
