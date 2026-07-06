@@ -21,14 +21,13 @@ def load_seen():
             return set(json.load(f))
     return set()
 
-
 def save_seen(data):
     with open(SEEN_FILE, "w") as f:
         json.dump(list(data), f)
         
 def get_tickers():
     r = requests.get(URL, headers=HEADERS, timeout=30)
-    soup = BeautifulSoup(r.text, "lxml")
+    soup = BeautifulSoup(r.text, "html.parser")
 
     tickers = []
 
