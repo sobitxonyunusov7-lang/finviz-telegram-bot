@@ -42,29 +42,19 @@ def get_tickers():
 def send_message(text):
     api = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-    requests.post(
+    response = requests.post(
         api,
         data={
             "chat_id": CHAT_ID,
             "text": text
-        },
-        timeout=30
+        }
     )
+
+    print(response.status_code)
+    print(response.text)
     
 def main():
-    seen = load_seen()
-    current = set(get_tickers())
-
-    new = current - seen
-
-    if new:
-        msg = "🚨 New Finviz Alert\n\n"
-        for ticker in sorted(new):
-            msg += f"#{ticker}\n"
-
-        send_message(msg)
-
-    save_seen(current)
+    send_message("✅ TEST")
 
 
 if __name__ == "__main__":
