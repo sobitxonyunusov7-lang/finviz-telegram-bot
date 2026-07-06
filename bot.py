@@ -21,10 +21,12 @@ def load_seen():
             return set(json.load(f))
     return set()
 
+
 def save_seen(data):
     with open(SEEN_FILE, "w") as f:
-        json.dump(list(data), f)
-        
+        json.dump(list(data), f, indent=2)
+
+
 def get_tickers():
     r = requests.get(URL, headers=HEADERS, timeout=30)
     soup = BeautifulSoup(r.text, "html.parser")
@@ -33,7 +35,7 @@ def get_tickers():
 
     for a in soup.find_all("a", class_="screener-link-primary"):
         ticker = a.text.strip()
-        if ticker:
+        if ticker and ticker not in tickers:
             tickers.append(ticker)
 
     return tickers
@@ -42,20 +44,77 @@ def get_tickers():
 def send_message(text):
     api = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-    response = requests.post(
+    requests.post(
         api,
         data={
             "chat_id": CHAT_ID,
             "text": text
-        }
+        },
+        timeout=30
     )
+    def main():
+    seen = load_seen()
+    current = set(get_tickers())
 
-    print(response.status_code)
-    print(response.text)
-    
-def main():
-    send_message("✅ TEST")
+    new = current - seen
+    old = current & seen
+
+    msg = "📊 Finviz New Low\n\n"
+
+    if new:
+        msg += "🟢 Yangi New Low:\n"
+        for ticker in sorted(new):
+            msg += f"🟢 #{ticker}\n"
+        msg += "\n"
+
+    msg += "⚪ Barcha New Low:\n"
+    for ticker in sorted(current):
+        if ticker in new:
+            msg += f"🟢 #{ticker}\n"
+        else:
+            msg += f"⚪ #{ticker}\n"
+
+    msg += f"\n📈 Jami: {len(current)} ta"
+
+    send_message(msg)
+
+    save_seen(current)
 
 
 if __name__ == "__main__":
     main()
+    name: Finviz Telegram Bot
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests beautifulsoup4
+
+      - run: python bot.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Commit seen.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add seen.json
+          git diff --cached --quiet || git commit -m "Update seen.json"
+          git push
