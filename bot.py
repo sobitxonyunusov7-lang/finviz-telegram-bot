@@ -52,7 +52,8 @@ def send_message(text):
         },
         timeout=30
     )
-    def main():
+    
+def main():
     seen = load_seen()
     current = set(get_tickers())
 
@@ -82,39 +83,4 @@ def send_message(text):
 
 
 if __name__ == "__main__":
-    main()
-    name: Finviz Telegram Bot
-
-on:
-  schedule:
-    - cron: "*/30 * * * *"
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  run:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - run: pip install requests beautifulsoup4
-
-      - run: python bot.py
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
-      - name: Commit seen.json
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add seen.json
-          git diff --cached --quiet || git commit -m "Update seen.json"
-          git push
+     main()
