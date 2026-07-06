@@ -29,8 +29,15 @@ def save_seen(data):
 
 def get_tickers():
     r = requests.get(URL, headers=HEADERS, timeout=30)
+
     print(r.status_code)
-    print(r.text[:500])
+    print(r.url)
+
+    with open("page.html", "w", encoding="utf-8") as f:
+        f.write(r.text)
+
+    print("Saved page.html")
+
     soup = BeautifulSoup(r.text, "html.parser")
 
     tickers = []
