@@ -29,3 +29,10 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python bot.py
+
+      - name: Upload page.html
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: page-html
+          path: page.html
