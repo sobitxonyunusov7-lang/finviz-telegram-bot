@@ -1,37 +1,38 @@
 import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
+from datetime import datetime, timezone
 import json
 import os
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-# Har bir screener: nomi, URL manzili, va "seen" ro'yxati saqlanadigan fayl
+# Har bir screener: nomi, URL manzili va holat fayli
 SCREENERS = [
     {
         "name": "New Low",
         "url": "https://finviz.com/screener?v=111&s=ta_newlow&f=sh_float_u50,sh_price_u1,sh_short_u10,ta_volatility_mo7&ft=4&o=-volume",
-        "seen_file": "seen_new_low.json",
+        "state_file": "state_new_low.json",
     },
     {
         "name": "52 High/Low",
         "url": "https://finviz.com/screener?v=111&f=sh_float_u50,sh_price_u1,sh_short_u10,ta_highlow52w_a0to10h,ta_volatility_mo7&ft=4&o=-volume",
-        "seen_file": "seen_52_high_low.json",
+        "state_file": "state_52_high_low.json",
     },
 ]
 
 
-def load_seen(seen_file):
-    if os.path.exists(seen_file):
-        with open(seen_file, "r") as f:
-            return set(json.load(f))
-    return set()
+def load_state(state_file):
+    if os.path.exists(state_file):
+        with open(state_file, "r") as f:
+            return json.load(f)
+    return {"date": None, "baseline": [], "last_run": []}
 
 
-def save_seen(seen_file, data):
-    with open(seen_file, "w") as f:
-        json.dump(list(data), f, indent=2)
+def save_state(state_file, state):
+    with open(state_file, "w") as f:
+        json.dump(state, f, indent=2)
 
 
 def get_tickers(url, page_html_path):
@@ -109,23 +110,34 @@ def send_message(text):
 def process_screener(screener):
     name = screener["name"]
     url = screener["url"]
-    seen_file = screener["seen_file"]
-    page_html_path = f"page_{seen_file.replace('.json', '')}.html"
+    state_file = screener["state_file"]
+    page_html_path = f"page_{state_file.replace('.json', '')}.html"
 
     print(f"\n=== {name} ekranini tekshirish ===")
 
-    seen = load_seen(seen_file)
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    state = load_state(state_file)
+
+    # Agar kun o'zgargan bo'lsa, kechagi "last_run" ro'yxati bugungi solishtirish
+    # bazasi (baseline) bo'ladi. Kun davomida baseline o'zgarmaydi.
+    if state["date"] != today:
+        state["baseline"] = state["last_run"]
+        state["date"] = today
+        print(f"Yangi kun boshlandi. Baseline yangilandi: {state['baseline']}")
+
+    baseline = set(state["baseline"])
     current = set(get_tickers(url, page_html_path))
 
-    new = current - seen
+    new = current - baseline
 
     if not new:
-        print(f"{name}: yangi ticker yo'q, xabar yuborilmadi.")
-        save_seen(seen_file, current)
+        print(f"{name}: yangi ticker yo'q (kechagi kunga nisbatan), xabar yuborilmadi.")
+        state["last_run"] = list(current)
+        save_state(state_file, state)
         return
 
     msg = f"📊 Finviz {name} — yangi belgilar aniqlandi!\n\n"
-    msg += "🟢 Yangi:\n"
+    msg += "🟢 Yangi (kechagi kunga nisbatan):\n"
     for ticker in sorted(new):
         msg += f"🟢 #{ticker}\n"
 
@@ -139,7 +151,9 @@ def process_screener(screener):
     msg += f"\n📈 Jami: {len(current)} ta"
 
     send_message(msg)
-    save_seen(seen_file, current)
+
+    state["last_run"] = list(current)
+    save_state(state_file, state)
 
 
 def main():
