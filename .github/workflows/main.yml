@@ -42,11 +42,11 @@ jobs:
           name: page-html
           path: page_*.html
 
-      - name: Save seen files back to repo
+      - name: Save state files back to repo
         if: always()
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen_new_low.json seen_52_high_low.json
-          git diff --quiet --cached || git commit -m "Update seen files [skip ci]"
+          git add state_new_low.json state_52_high_low.json
+          git diff --quiet --cached || git commit -m "Update state files [skip ci]"
           git push
