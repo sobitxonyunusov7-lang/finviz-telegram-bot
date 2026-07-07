@@ -34,11 +34,11 @@ def get_tickers():
                 "Chrome/124.0 Safari/537.36"
             )
         )
-        page.goto(URL, timeout=60000, wait_until="networkidle")
+        page.goto(URL, timeout=60000, wait_until="domcontentloaded")
 
         # Jadval elementi paydo bo'lishini kutamiz (JS orqali yuklanadi)
         try:
-            page.wait_for_selector("a.screener-link-primary", timeout=15000)
+            page.wait_for_selector("a.screener-link-primary", timeout=30000)
         except Exception:
             print("Jadval kutilgan vaqtda topilmadi, mavjud HTML bilan davom etamiz")
 
