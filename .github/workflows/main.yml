@@ -33,18 +33,18 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python bot.py
 
-      - name: Upload page.html
+      - name: Upload page.html files
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: page-html
-          path: page.html
+          path: page_*.html
 
-      - name: Save seen.json back to repo
+      - name: Save seen files back to repo
         if: always()
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen.json
-          git diff --quiet --cached || git commit -m "Update seen.json [skip ci]"
+          git add seen_new_low.json seen_52_high_low.json
+          git diff --quiet --cached || git commit -m "Update seen files [skip ci]"
           git push
