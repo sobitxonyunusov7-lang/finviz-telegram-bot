@@ -38,7 +38,7 @@ def get_tickers():
 
         # Jadval elementi paydo bo'lishini kutamiz (JS orqali yuklanadi)
         try:
-            page.wait_for_selector("a.screener-link-primary", timeout=30000)
+            page.wait_for_selector("table.screener_table", timeout=30000)
         except Exception:
             print("Jadval kutilgan vaqtda topilmadi, mavjud HTML bilan davom etamiz")
 
@@ -52,8 +52,8 @@ def get_tickers():
     soup = BeautifulSoup(html, "html.parser")
 
     tickers = []
-    for a in soup.find_all("a", class_="screener-link-primary"):
-        ticker = a.text.strip()
+    for td in soup.find_all(attrs={"data-boxover-ticker": True}):
+        ticker = td["data-boxover-ticker"].strip()
         if ticker and ticker not in tickers:
             tickers.append(ticker)
 
