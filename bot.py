@@ -25,6 +25,8 @@ def save_seen(data):
 
 
 def get_tickers():
+    all_tickers = []
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(
@@ -34,31 +36,52 @@ def get_tickers():
                 "Chrome/124.0 Safari/537.36"
             )
         )
-        page.goto(URL, timeout=60000, wait_until="domcontentloaded")
 
-        # Jadval elementi paydo bo'lishini kutamiz (JS orqali yuklanadi)
-        try:
-            page.wait_for_selector("table.screener_table", timeout=30000)
-        except Exception:
-            print("Jadval kutilgan vaqtda topilmadi, mavjud HTML bilan davom etamiz")
+        row_offset = 1
+        page_size = 20
+        full_html = ""
 
-        html = page.content()
+        while True:
+            page_url = URL if row_offset == 1 else f"{URL}&r={row_offset}"
+            page.goto(page_url, timeout=60000, wait_until="domcontentloaded")
+
+            try:
+                page.wait_for_selector("table.screener_table", timeout=30000)
+            except Exception:
+                print(f"r={row_offset}: jadval kutilgan vaqtda topilmadi")
+
+            html = page.content()
+            if row_offset == 1:
+                full_html = html
+
+            soup = BeautifulSoup(html, "html.parser")
+            page_tickers = []
+            for td in soup.find_all(attrs={"data-boxover-ticker": True}):
+                ticker = td["data-boxover-ticker"].strip()
+                if ticker and ticker not in page_tickers:
+                    page_tickers.append(ticker)
+
+            if not page_tickers:
+                break
+
+            new_on_page = [t for t in page_tickers if t not in all_tickers]
+            all_tickers.extend(new_on_page)
+
+            print(f"r={row_offset}: {len(page_tickers)} ta topildi (jami hozircha: {len(all_tickers)})")
+
+            if len(page_tickers) < page_size or not new_on_page:
+                break
+
+            row_offset += page_size
+
         browser.close()
 
     with open("page.html", "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(full_html)
     print("Saved page.html")
 
-    soup = BeautifulSoup(html, "html.parser")
-
-    tickers = []
-    for td in soup.find_all(attrs={"data-boxover-ticker": True}):
-        ticker = td["data-boxover-ticker"].strip()
-        if ticker and ticker not in tickers:
-            tickers.append(ticker)
-
-    print(f"{len(tickers)} ta ticker topildi: {tickers}")
-    return tickers
+    print(f"Jami {len(all_tickers)} ta ticker topildi: {all_tickers}")
+    return all_tickers
 
 
 def send_message(text):
@@ -80,15 +103,17 @@ def main():
 
     new = current - seen
 
-    msg = "📊 Finviz New Low\n\n"
+    if not new:
+        print("Yangi ticker yo'q, xabar yuborilmadi.")
+        save_seen(current)
+        return
 
-    if new:
-        msg += "🟢 Yangi New Low:\n"
-        for ticker in sorted(new):
-            msg += f"🟢 #{ticker}\n"
-        msg += "\n"
+    msg = "📊 Finviz New Low — yangi belgilar aniqlandi!\n\n"
+    msg += "🟢 Yangi New Low:\n"
+    for ticker in sorted(new):
+        msg += f"🟢 #{ticker}\n"
 
-    msg += "⚪ Barcha New Low:\n"
+    msg += "\n⚪ Barcha New Low:\n"
     for ticker in sorted(current):
         if ticker in new:
             msg += f"🟢 #{ticker}\n"
