@@ -7,7 +7,7 @@ import os
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-URL = "https://finviz.com/screener.ashx?v=111&f=sh_float_u50,sh_price_u1,sh_short_u10,ta_highlow52w_a0to10h,ta_volatility_mo7&ft=4&o=-volume"
+URL = "https://finviz.com/screener?v=111&s=ta_newlow&f=sh_float_u50,sh_price_u1,sh_short_u10,ta_volatility_mo7&ft=4&o=-volume"
 
 SEEN_FILE = "seen.json"
 
