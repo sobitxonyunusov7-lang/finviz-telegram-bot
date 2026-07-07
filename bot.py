@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 import json
 import os
 
@@ -7,10 +8,6 @@ BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 URL = "https://finviz.com/screener.ashx?v=111&f=sh_float_u50,sh_price_u1,sh_short_u10,ta_highlow52w_a0to10h,ta_volatility_mo7&ft=4&o=-volume"
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0"
-}
 
 SEEN_FILE = "seen.json"
 
@@ -28,32 +25,45 @@ def save_seen(data):
 
 
 def get_tickers():
-    r = requests.get(URL, headers=HEADERS, timeout=30)
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0 Safari/537.36"
+            )
+        )
+        page.goto(URL, timeout=60000, wait_until="networkidle")
 
-    print(r.status_code)
-    print(r.url)
+        # Jadval elementi paydo bo'lishini kutamiz (JS orqali yuklanadi)
+        try:
+            page.wait_for_selector("a.screener-link-primary", timeout=15000)
+        except Exception:
+            print("Jadval kutilgan vaqtda topilmadi, mavjud HTML bilan davom etamiz")
+
+        html = page.content()
+        browser.close()
 
     with open("page.html", "w", encoding="utf-8") as f:
-        f.write(r.text)
-
+        f.write(html)
     print("Saved page.html")
 
-    soup = BeautifulSoup(r.text, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
 
     tickers = []
-
     for a in soup.find_all("a", class_="screener-link-primary"):
         ticker = a.text.strip()
         if ticker and ticker not in tickers:
             tickers.append(ticker)
 
+    print(f"{len(tickers)} ta ticker topildi: {tickers}")
     return tickers
 
 
 def send_message(text):
     api = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-
-    requests.post(
+    resp = requests.post(
         api,
         data={
             "chat_id": CHAT_ID,
@@ -61,13 +71,14 @@ def send_message(text):
         },
         timeout=30
     )
-    
+    print("Telegram javobi:", resp.status_code, resp.text[:300])
+
+
 def main():
     seen = load_seen()
     current = set(get_tickers())
 
     new = current - seen
-    old = current & seen
 
     msg = "📊 Finviz New Low\n\n"
 
@@ -87,9 +98,8 @@ def main():
     msg += f"\n📈 Jami: {len(current)} ta"
 
     send_message(msg)
-
     save_seen(current)
 
 
 if __name__ == "__main__":
-     main()
+    main()
