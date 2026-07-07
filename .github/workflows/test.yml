@@ -1,0 +1,22 @@
+name: Test Webull
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - run: python test_webull.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: webull-page
+          path: webull_page.html
