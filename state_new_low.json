@@ -1,7 +1,6 @@
 {
-  "date": "2026-07-07",
-  "baseline": [],
-  "last_run": [
+  "date": "2026-07-08",
+  "baseline": [
     "TNON",
     "FEED",
     "DDC",
@@ -30,5 +29,33 @@
     "CURX",
     "SCNI",
     "ADGM"
+  ],
+  "last_run": [
+    "FLUX",
+    "TNON",
+    "ENLV",
+    "FTFT",
+    "SUGP",
+    "MGN",
+    "ADGM",
+    "CPOP",
+    "FEED",
+    "CDT",
+    "CYCU",
+    "CURX",
+    "WHLR",
+    "VIVS",
+    "MERC",
+    "GAUZ",
+    "RITR",
+    "LIQT",
+    "KITT",
+    "FNGR",
+    "BGL",
+    "RDHL",
+    "SLND",
+    "OMH",
+    "XPON",
+    "GIPR"
   ]
 }
