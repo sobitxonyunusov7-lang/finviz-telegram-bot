@@ -1,24 +1,6 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "baseline": [
-    "YHC",
-    "SOAR",
-    "CYAB",
-    "RDHL",
-    "NWTG",
-    "ONFO",
-    "CDT",
-    "ADGM",
-    "FEED",
-    "AEON",
-    "CURX",
-    "RITR",
-    "XPON",
-    "WHLR",
-    "VIVK",
-    "FNGR"
-  ],
-  "last_run": [
     "PSQH",
     "XPON",
     "ONFO",
@@ -43,5 +25,30 @@
     "SHFS",
     "LGHL",
     "DDC"
+  ],
+  "last_run": [
+    "VIVK",
+    "ZNB",
+    "XPON",
+    "AEON",
+    "SUGP",
+    "NEXR",
+    "CPOP",
+    "MGN",
+    "ONFO",
+    "SURG",
+    "DDC",
+    "CCHH",
+    "SOBR",
+    "YHC",
+    "SHFS",
+    "LGHL",
+    "CDT",
+    "PSQH",
+    "VBIO",
+    "APUS",
+    "HAO",
+    "LMFA",
+    "EDBL"
   ]
 }
