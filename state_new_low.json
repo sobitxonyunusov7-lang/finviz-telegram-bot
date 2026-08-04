@@ -27,22 +27,22 @@
     "NRSN"
   ],
   "last_run": [
-    "NIVF",
+    "TOPP",
     "CHAI",
     "SCKT",
-    "BIAF",
-    "ALPS",
-    "CISS",
-    "AEHL",
-    "TOPP",
-    "REED",
-    "BNRG",
-    "CWD",
     "BYSI",
+    "CWD",
+    "REED",
     "SOS",
-    "YYAI",
-    "SUGP",
+    "BYAH",
+    "AEHL",
     "HUBC",
-    "BYAH"
+    "ALPS",
+    "BNRG",
+    "CISS",
+    "YYAI",
+    "NIVF",
+    "BIAF",
+    "SUGP"
   ]
 }
