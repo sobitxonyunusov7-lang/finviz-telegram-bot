@@ -20,17 +20,20 @@
     "SUGP"
   ],
   "last_run": [
+    "BGL",
+    "NXGL",
+    "XHLD",
     "BIAF",
     "BNRG",
-    "CHAI",
-    "HUBC",
     "CWD",
     "BYSI",
-    "JUNS",
     "IPW",
-    "AEHL",
-    "XHLD",
+    "HUBC",
     "LOOP",
+    "AEHL",
+    "CHAI",
+    "JUNS",
+    "RIME",
     "VSEE"
   ]
 }
