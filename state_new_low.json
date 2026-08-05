@@ -1,32 +1,6 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "baseline": [
-    "VCIG",
-    "IPW",
-    "FNGR",
-    "TOPP",
-    "YYAI",
-    "PMEC",
-    "MSGY",
-    "AVAT",
-    "NIVF",
-    "BEAT",
-    "HUDI",
-    "HAO",
-    "LRHC",
-    "VNTG",
-    "CELZ",
-    "TAOP",
-    "ESLA",
-    "ZEO",
-    "SOS",
-    "LNKS",
-    "AEHL",
-    "DDC",
-    "XHLD",
-    "NRSN"
-  ],
-  "last_run": [
     "TOPP",
     "CHAI",
     "SCKT",
@@ -44,5 +18,19 @@
     "NIVF",
     "BIAF",
     "SUGP"
+  ],
+  "last_run": [
+    "BIAF",
+    "BNRG",
+    "CHAI",
+    "HUBC",
+    "CWD",
+    "BYSI",
+    "JUNS",
+    "IPW",
+    "AEHL",
+    "XHLD",
+    "LOOP",
+    "VSEE"
   ]
 }
