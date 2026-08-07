@@ -23,19 +23,21 @@
   ],
   "last_run": [
     "CISS",
-    "LIQT",
-    "VCIG",
     "SOS",
-    "AEHL",
-    "YYAI",
-    "CHAI",
-    "NIVF",
-    "BIAF",
-    "KIDZ",
+    "RMCF",
     "ONFO",
-    "TPET",
+    "CHAI",
+    "EPOW",
+    "YYAI",
+    "LIQT",
     "TNON",
-    "SXTC",
-    "EPOW"
+    "SNTI",
+    "BIAF",
+    "AEHL",
+    "TPET",
+    "NIVF",
+    "VCIG",
+    "KIDZ",
+    "SXTC"
   ]
 }
