@@ -23,17 +23,19 @@
     "SOS"
   ],
   "last_run": [
+    "SMTK",
+    "OMH",
+    "TOPP",
+    "PMCB",
+    "FGL",
+    "LRHC",
     "MERC",
     "JAGX",
-    "OMH",
-    "VCIG",
     "CHSN",
-    "BYSI",
-    "SMTK",
-    "LRHC",
-    "LOOP",
-    "FGL",
     "BIAF",
-    "RMCF"
+    "LOOP",
+    "RMCF",
+    "BYSI",
+    "VCIG"
   ]
 }
