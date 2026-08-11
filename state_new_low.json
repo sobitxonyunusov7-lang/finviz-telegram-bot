@@ -1,28 +1,6 @@
 {
-  "date": "2026-08-10",
+  "date": "2026-08-11",
   "baseline": [
-    "ONFO",
-    "AEHL",
-    "CHSN",
-    "SNTI",
-    "BYSI",
-    "CISS",
-    "VCIG",
-    "NIVF",
-    "SXTC",
-    "FTFT",
-    "LIQT",
-    "CHAI",
-    "YYAI",
-    "TNON",
-    "BIAF",
-    "KIDZ",
-    "EPOW",
-    "TPET",
-    "RMCF",
-    "SOS"
-  ],
-  "last_run": [
     "BIAF",
     "FGL",
     "SMTK",
@@ -37,6 +15,25 @@
     "MERC",
     "OMH",
     "PMCB",
+    "JAGX"
+  ],
+  "last_run": [
+    "AUID",
+    "TOPP",
+    "CHAI",
+    "SMTK",
+    "KIDZ",
+    "RMCF",
+    "VEEA",
+    "SAGT",
+    "HUBC",
+    "PMCB",
+    "ACTU",
+    "VNRX",
+    "UZX",
+    "OMH",
+    "BIAF",
+    "VCIG",
     "JAGX"
   ]
 }
