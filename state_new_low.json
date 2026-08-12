@@ -1,23 +1,6 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "baseline": [
-    "BIAF",
-    "FGL",
-    "SMTK",
-    "LRHC",
-    "LOOP",
-    "VCIG",
-    "CHSN",
-    "TOPP",
-    "BYSI",
-    "RMCF",
-    "ARTL",
-    "MERC",
-    "OMH",
-    "PMCB",
-    "JAGX"
-  ],
-  "last_run": [
     "SMTK",
     "PMCB",
     "RMCF",
@@ -37,5 +20,28 @@
     "JAGX",
     "TOPP",
     "AUID"
+  ],
+  "last_run": [
+    "PMCB",
+    "KIDZ",
+    "MERC",
+    "BBLG",
+    "NIVF",
+    "SLXN",
+    "IPDN",
+    "ALPS",
+    "HUBC",
+    "UZX",
+    "SMTK",
+    "CAPS",
+    "DAIC",
+    "VNRX",
+    "MTNB",
+    "LRHC",
+    "ALP",
+    "JAGX",
+    "FAMI",
+    "HAO",
+    "YYAI"
   ]
 }
