@@ -25,17 +25,17 @@
     "OBAI"
   ],
   "last_run": [
-    "MERC",
-    "RIME",
-    "ONCO",
-    "HCTI",
-    "FTFT",
-    "VCIG",
-    "HUBC",
-    "CAPS",
-    "AEON",
     "VNRX",
+    "MERC",
+    "BEAT",
+    "ONCO",
+    "FTFT",
+    "HUBC",
+    "AEON",
+    "HCTI",
+    "RIME",
     "FGL",
-    "BEAT"
+    "CAPS",
+    "VCIG"
   ]
 }
