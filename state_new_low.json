@@ -24,21 +24,22 @@
     "IPDN"
   ],
   "last_run": [
-    "HCTI",
-    "LOOP",
-    "VCIG",
-    "VBIO",
-    "MERC",
-    "MATH",
-    "CHGA",
-    "FLZH",
-    "VNRX",
-    "WHLR",
-    "TWG",
     "SKYE",
-    "ONCO",
+    "MERC",
+    "VNRX",
+    "VCIG",
+    "BBLG",
+    "CHGA",
+    "WHLR",
     "ARTL",
     "IPDN",
-    "TOPP"
+    "FLZH",
+    "TOPP",
+    "HCTI",
+    "TWG",
+    "MATH",
+    "ONCO",
+    "VBIO",
+    "LOOP"
   ]
 }
