@@ -24,17 +24,16 @@
     "IPDN"
   ],
   "last_run": [
-    "MERC",
+    "VBIO",
     "IPDN",
-    "SKYE",
-    "FLZH",
     "CHGA",
     "ONCO",
-    "VBIO",
     "TWG",
-    "TOPP",
     "VNRX",
+    "MERC",
+    "SKYE",
     "LOOP",
+    "TOPP",
     "VCIG"
   ]
 }
