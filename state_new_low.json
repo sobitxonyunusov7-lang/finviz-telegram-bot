@@ -23,23 +23,23 @@
   ],
   "last_run": [
     "ARTL",
-    "VNRX",
     "VBIO",
-    "ONCO",
+    "HCTI",
+    "VCIG",
+    "VNRX",
+    "FLZH",
+    "WHLR",
+    "TOPP",
+    "MATH",
     "INUV",
+    "LOOP",
     "MERC",
     "IPDN",
-    "AHG",
-    "HCTI",
     "CHGA",
-    "MATH",
-    "LOOP",
     "BBLG",
+    "ONCO",
     "SKYE",
-    "TOPP",
     "TWG",
-    "VCIG",
-    "FLZH",
-    "WHLR"
+    "AHG"
   ]
 }
