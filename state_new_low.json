@@ -22,24 +22,24 @@
     "VBIO"
   ],
   "last_run": [
-    "ARTL",
-    "VBIO",
     "HCTI",
-    "VCIG",
-    "VNRX",
-    "FLZH",
+    "AHG",
     "WHLR",
-    "TOPP",
-    "MATH",
-    "INUV",
-    "LOOP",
-    "MERC",
-    "IPDN",
-    "CHGA",
     "BBLG",
+    "INUV",
+    "MATH",
+    "FLZH",
+    "VNRX",
+    "IPDN",
+    "VBIO",
+    "VCIG",
+    "TOPP",
     "ONCO",
-    "SKYE",
+    "ARTL",
+    "CHGA",
     "TWG",
-    "AHG"
+    "MERC",
+    "SKYE",
+    "LOOP"
   ]
 }
