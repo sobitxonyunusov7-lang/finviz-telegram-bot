@@ -22,24 +22,24 @@
     "ARTL"
   ],
   "last_run": [
-    "LOOP",
-    "MERC",
-    "TOPP",
-    "ONCO",
-    "INUV",
-    "BBLG",
-    "ARTL",
     "VCIG",
-    "IPDN",
-    "FLZH",
+    "BBLG",
+    "VNRX",
+    "MERC",
     "MATH",
-    "TWG",
     "AHG",
     "WHLR",
-    "VBIO",
-    "SKYE",
+    "CHGA",
+    "LOOP",
+    "TWG",
     "HCTI",
-    "VNRX",
-    "CHGA"
+    "FLZH",
+    "SKYE",
+    "ONCO",
+    "VBIO",
+    "IPDN",
+    "INUV",
+    "ARTL",
+    "TOPP"
   ]
 }
