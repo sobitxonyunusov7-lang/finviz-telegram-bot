@@ -1,27 +1,6 @@
 {
-  "date": "2026-08-22",
+  "date": "2026-08-23",
   "baseline": [
-    "ONCO",
-    "SKYE",
-    "FLZH",
-    "MERC",
-    "AHG",
-    "INUV",
-    "BBLG",
-    "HCTI",
-    "ARTL",
-    "CHGA",
-    "TOPP",
-    "VNRX",
-    "IPDN",
-    "VCIG",
-    "TWG",
-    "WHLR",
-    "LOOP",
-    "MATH",
-    "VBIO"
-  ],
-  "last_run": [
     "HCTI",
     "VBIO",
     "SKYE",
@@ -41,5 +20,26 @@
     "TOPP",
     "BBLG",
     "ARTL"
+  ],
+  "last_run": [
+    "LOOP",
+    "MERC",
+    "TOPP",
+    "ONCO",
+    "INUV",
+    "BBLG",
+    "ARTL",
+    "VCIG",
+    "IPDN",
+    "FLZH",
+    "MATH",
+    "TWG",
+    "AHG",
+    "WHLR",
+    "VBIO",
+    "SKYE",
+    "HCTI",
+    "VNRX",
+    "CHGA"
   ]
 }
