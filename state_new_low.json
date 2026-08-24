@@ -22,21 +22,23 @@
     "SKYE"
   ],
   "last_run": [
-    "ARTL",
-    "VNRX",
+    "TWG",
+    "HCTI",
+    "MERC",
+    "OSRH",
+    "IPDN",
+    "SNTI",
     "SLXN",
     "FLZH",
-    "FTFT",
-    "TRUG",
-    "VIVK",
-    "IPDN",
-    "WKSP",
-    "MERC",
-    "KAPA",
-    "HCTI",
-    "SNTI",
-    "NXGL",
+    "ARTL",
     "BBLG",
-    "TWG"
+    "VNRX",
+    "NXGL",
+    "TRUG",
+    "FTFT",
+    "INUV",
+    "VIVK",
+    "KAPA",
+    "WKSP"
   ]
 }
