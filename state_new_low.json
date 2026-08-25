@@ -1,27 +1,6 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "baseline": [
-    "MATH",
-    "TOPP",
-    "VCIG",
-    "MERC",
-    "WHLR",
-    "TWG",
-    "VBIO",
-    "CHGA",
-    "BBLG",
-    "HCTI",
-    "VNRX",
-    "IPDN",
-    "AHG",
-    "INUV",
-    "ARTL",
-    "ONCO",
-    "LOOP",
-    "FLZH",
-    "SKYE"
-  ],
-  "last_run": [
     "OSRH",
     "TWG",
     "WKSP",
@@ -40,5 +19,26 @@
     "BBLG",
     "TRUG",
     "HCTI"
+  ],
+  "last_run": [
+    "ZEO",
+    "VIVK",
+    "NXL",
+    "OSRH",
+    "BTTC",
+    "WKSP",
+    "SDST",
+    "SNYR",
+    "ABVC",
+    "FNGR",
+    "LRHC",
+    "FGL",
+    "SLXN",
+    "RMSG",
+    "TRUG",
+    "TWG",
+    "FLZH",
+    "HUDI",
+    "INUV"
   ]
 }
