@@ -1,26 +1,6 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "baseline": [
-    "OSRH",
-    "TWG",
-    "WKSP",
-    "VNRX",
-    "FLZH",
-    "VIVK",
-    "FTFT",
-    "KAPA",
-    "NXGL",
-    "SNTI",
-    "IPDN",
-    "MERC",
-    "INUV",
-    "ARTL",
-    "SLXN",
-    "BBLG",
-    "TRUG",
-    "HCTI"
-  ],
-  "last_run": [
     "LRHC",
     "VIVK",
     "RMSG",
@@ -45,5 +25,19 @@
     "MERC",
     "NXL",
     "VNRX"
+  ],
+  "last_run": [
+    "SLXN",
+    "FNGR",
+    "TWG",
+    "SDST",
+    "LNKS",
+    "YYAI",
+    "NXL",
+    "VEEA",
+    "BBLG",
+    "VNRX",
+    "ABVC",
+    "VVOS"
   ]
 }
