@@ -33,22 +33,24 @@
     "EZGO"
   ],
   "last_run": [
-    "DYAI",
-    "GMEX",
-    "FUSE",
+    "TOPP",
+    "NCT",
     "INUV",
     "NUWE",
-    "CDT",
-    "TOPP",
-    "WHLR",
-    "VWAV",
-    "DARE",
-    "JAGX",
-    "PBK",
-    "NCT",
-    "OLOX",
     "MTNB",
+    "DARE",
     "SDST",
-    "BRTX"
+    "FUSE",
+    "DYAI",
+    "CDT",
+    "PBK",
+    "JAGX",
+    "BRTX",
+    "GMEX",
+    "GOVX",
+    "OLOX",
+    "SAGT",
+    "SOS",
+    "WHLR"
   ]
 }
