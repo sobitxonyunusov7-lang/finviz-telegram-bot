@@ -22,20 +22,24 @@
     "SAGT"
   ],
   "last_run": [
-    "VWAV",
-    "IPDN",
-    "GOVX",
-    "NCT",
-    "MOBX",
-    "ESLA",
-    "DCX",
-    "SDST",
     "JAGX",
-    "INUV",
-    "CDT",
+    "SDST",
+    "VWAV",
     "HCTI",
-    "WHLR",
+    "IPDN",
+    "INUV",
+    "KALA",
+    "CDT",
+    "RIME",
+    "MOBX",
+    "GMEX",
+    "PBK",
+    "TRUG",
+    "ESLA",
     "OLOX",
-    "PBK"
+    "DCX",
+    "GOVX",
+    "WHLR",
+    "NCT"
   ]
 }
