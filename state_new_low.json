@@ -22,23 +22,23 @@
     "GMEX"
   ],
   "last_run": [
-    "DCX",
     "IPDN",
-    "RIME",
     "ESLA",
-    "INUV",
-    "VWAV",
-    "MOBX",
-    "KALA",
-    "CDT",
-    "WHLR",
-    "SDST",
-    "TRUG",
-    "OLOX",
     "HCTI",
-    "NCT",
-    "GOVX",
+    "TRUG",
+    "DCX",
+    "WHLR",
+    "KALA",
+    "RIME",
+    "SDST",
+    "OLOX",
+    "INUV",
+    "JAGX",
     "GMEX",
-    "JAGX"
+    "GOVX",
+    "CDT",
+    "MOBX",
+    "VWAV",
+    "NCT"
   ]
 }
