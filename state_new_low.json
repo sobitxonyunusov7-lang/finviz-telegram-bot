@@ -1,27 +1,6 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "baseline": [
-    "TOPP",
-    "INUV",
-    "WHLR",
-    "JAGX",
-    "FUSE",
-    "OLOX",
-    "DYAI",
-    "BRTX",
-    "NUWE",
-    "NCT",
-    "GMEX",
-    "MTNB",
-    "DARE",
-    "SDST",
-    "GOVX",
-    "SOS",
-    "PBK",
-    "CDT",
-    "SAGT"
-  ],
-  "last_run": [
     "MOBX",
     "WHLR",
     "VWAV",
@@ -41,5 +20,25 @@
     "NCT",
     "TRUG",
     "GMEX"
+  ],
+  "last_run": [
+    "JAGX",
+    "NCT",
+    "CDT",
+    "GMEX",
+    "TRUG",
+    "KALA",
+    "WHLR",
+    "DCX",
+    "INUV",
+    "HCTI",
+    "IPDN",
+    "RIME",
+    "GOVX",
+    "VWAV",
+    "OLOX",
+    "SDST",
+    "MOBX",
+    "ESLA"
   ]
 }
