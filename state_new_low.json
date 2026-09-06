@@ -1,27 +1,6 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-06",
   "baseline": [
-    "MOBX",
-    "WHLR",
-    "VWAV",
-    "PBK",
-    "JAGX",
-    "HCTI",
-    "ESLA",
-    "OLOX",
-    "IPDN",
-    "KALA",
-    "GOVX",
-    "INUV",
-    "RIME",
-    "DCX",
-    "CDT",
-    "SDST",
-    "NCT",
-    "TRUG",
-    "GMEX"
-  ],
-  "last_run": [
     "IPDN",
     "ESLA",
     "HCTI",
@@ -40,5 +19,25 @@
     "MOBX",
     "VWAV",
     "NCT"
+  ],
+  "last_run": [
+    "WHLR",
+    "IPDN",
+    "INUV",
+    "OLOX",
+    "GMEX",
+    "VWAV",
+    "DCX",
+    "MOBX",
+    "NCT",
+    "KALA",
+    "TRUG",
+    "HCTI",
+    "GOVX",
+    "JAGX",
+    "SDST",
+    "RIME",
+    "ESLA",
+    "CDT"
   ]
 }
