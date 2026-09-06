@@ -21,23 +21,23 @@
     "NCT"
   ],
   "last_run": [
-    "GOVX",
-    "VWAV",
-    "INUV",
-    "IPDN",
-    "CDT",
-    "HCTI",
-    "SDST",
-    "ESLA",
-    "WHLR",
-    "TRUG",
-    "GMEX",
-    "MOBX",
     "NCT",
-    "DCX",
+    "VWAV",
     "KALA",
     "RIME",
+    "GOVX",
+    "IPDN",
+    "INUV",
+    "DCX",
+    "SDST",
+    "CDT",
+    "WHLR",
+    "TRUG",
+    "MOBX",
+    "ESLA",
+    "HCTI",
+    "OLOX",
     "JAGX",
-    "OLOX"
+    "GMEX"
   ]
 }
