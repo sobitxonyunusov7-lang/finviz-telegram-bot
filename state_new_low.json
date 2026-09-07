@@ -21,23 +21,23 @@
     "ESLA"
   ],
   "last_run": [
-    "CDT",
-    "JAGX",
-    "RIME",
-    "VWAV",
-    "HCTI",
-    "GOVX",
-    "INUV",
-    "SDST",
-    "KALA",
-    "ESLA",
-    "MOBX",
-    "IPDN",
+    "TRUG",
     "NCT",
     "OLOX",
-    "DCX",
+    "INUV",
+    "KALA",
+    "RIME",
+    "WHLR",
     "GMEX",
-    "TRUG",
-    "WHLR"
+    "JAGX",
+    "DCX",
+    "CDT",
+    "SDST",
+    "ESLA",
+    "VWAV",
+    "HCTI",
+    "MOBX",
+    "GOVX",
+    "IPDN"
   ]
 }
