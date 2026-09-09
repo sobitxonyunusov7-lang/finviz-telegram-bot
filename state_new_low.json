@@ -1,26 +1,6 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "baseline": [
-    "TRUG",
-    "NCT",
-    "OLOX",
-    "INUV",
-    "KALA",
-    "RIME",
-    "WHLR",
-    "GMEX",
-    "JAGX",
-    "DCX",
-    "CDT",
-    "SDST",
-    "ESLA",
-    "VWAV",
-    "HCTI",
-    "MOBX",
-    "GOVX",
-    "IPDN"
-  ],
-  "last_run": [
     "IPDN",
     "DDC",
     "EPOW",
@@ -49,5 +29,25 @@
     "GMEX",
     "CDT",
     "RETO"
+  ],
+  "last_run": [
+    "VTAK",
+    "JAGX",
+    "LOOP",
+    "DDC",
+    "GOVX",
+    "SDST",
+    "SAGT",
+    "GMEX",
+    "HCTI",
+    "HPAI",
+    "DUO",
+    "SDA",
+    "VNRX",
+    "RETO",
+    "WHLR",
+    "SNTI",
+    "ONFO",
+    "VWAV"
   ]
 }
