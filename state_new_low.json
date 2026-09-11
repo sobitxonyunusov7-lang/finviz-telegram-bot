@@ -1,28 +1,6 @@
 {
-  "date": "2026-09-10",
+  "date": "2026-09-11",
   "baseline": [
-    "SNTI",
-    "GMEX",
-    "JAGX",
-    "EHGO",
-    "HCTI",
-    "ONFO",
-    "WHLR",
-    "RAIN",
-    "DDC",
-    "LOOP",
-    "RETO",
-    "SDA",
-    "HPAI",
-    "SDST",
-    "VWAV",
-    "VNRX",
-    "PPCB",
-    "VTAK",
-    "SAGT",
-    "GOVX"
-  ],
-  "last_run": [
     "TWG",
     "EPOW",
     "ENLV",
@@ -46,5 +24,27 @@
     "SAGT",
     "HPAI",
     "SLGB"
+  ],
+  "last_run": [
+    "SAGT",
+    "ONFO",
+    "DYAI",
+    "TPST",
+    "EPOW",
+    "SUGP",
+    "LHSW",
+    "YYAI",
+    "HUBC",
+    "TWG",
+    "INUV",
+    "BTTC",
+    "FRGT",
+    "KUST",
+    "SOS",
+    "CDT",
+    "IZM",
+    "IPDN",
+    "JAGX",
+    "GXAI"
   ]
 }
