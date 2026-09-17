@@ -35,16 +35,18 @@
     "RMSG"
   ],
   "last_run": [
-    "TWG",
-    "GOVX",
-    "DDC",
-    "YYAI",
-    "SOS",
-    "CDT",
+    "HCTI",
     "RETO",
+    "CDT",
+    "DDC",
     "AEI",
-    "SBFM",
+    "TWG",
+    "HLSQ",
     "ESLA",
-    "ENLV"
+    "GOVX",
+    "SOS",
+    "ENLV",
+    "YYAI",
+    "SBFM"
   ]
 }
