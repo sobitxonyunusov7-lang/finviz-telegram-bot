@@ -1,30 +1,6 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "baseline": [
-    "NIVF",
-    "RAIN",
-    "LHSW",
-    "SLGB",
-    "SAGT",
-    "CDT",
-    "FRGT",
-    "AEI",
-    "BENF",
-    "AMZE",
-    "EHTH",
-    "VTAK",
-    "CMND",
-    "HLSQ",
-    "SDST",
-    "GOVX",
-    "DCX",
-    "SBFM",
-    "RETO",
-    "SOS",
-    "MOBX",
-    "CODX"
-  ],
-  "last_run": [
     "SBFM",
     "CMND",
     "DCX",
@@ -47,5 +23,23 @@
     "AMZE",
     "MOBX",
     "GOVX"
+  ],
+  "last_run": [
+    "ESLA",
+    "EDVA",
+    "DDC",
+    "TWG",
+    "CRIS",
+    "FMST",
+    "DCX",
+    "GOVX",
+    "ELOG",
+    "CCHH",
+    "MASK",
+    "NXXT",
+    "CDT",
+    "RDHL",
+    "FRGT",
+    "YCBD"
   ]
 }
