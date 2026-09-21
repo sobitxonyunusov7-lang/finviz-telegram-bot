@@ -25,22 +25,22 @@
     "GOVX"
   ],
   "last_run": [
-    "FMST",
-    "YCBD",
-    "CRIS",
-    "CCHH",
-    "FRGT",
-    "RDHL",
     "EDVA",
-    "GOVX",
-    "TWG",
+    "DCX",
+    "FMST",
+    "RDHL",
     "ELOG",
     "NXXT",
-    "MASK",
-    "ESLA",
-    "DCX",
-    "BDMD",
+    "TWG",
     "DDC",
-    "CDT"
+    "MASK",
+    "BDMD",
+    "CRIS",
+    "GOVX",
+    "ESLA",
+    "CCHH",
+    "FRGT",
+    "CDT",
+    "YCBD"
   ]
 }
