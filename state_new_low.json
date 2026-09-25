@@ -1,27 +1,6 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "baseline": [
-    "TWG",
-    "VHUB",
-    "FRGT",
-    "OBAI",
-    "CTNT",
-    "VVOS",
-    "MOBX",
-    "ADGM",
-    "REED",
-    "NIVF",
-    "RKDA",
-    "SOS",
-    "ESLA",
-    "DCX",
-    "EDVA",
-    "CAPS",
-    "HLSQ",
-    "SLXN",
-    "AEI"
-  ],
-  "last_run": [
     "SLXN",
     "CRIS",
     "HLSQ",
@@ -44,5 +23,29 @@
     "TWG",
     "SBFM",
     "DCX"
+  ],
+  "last_run": [
+    "FRGT",
+    "RKDA",
+    "SGLY",
+    "NIVF",
+    "CRIS",
+    "RDHL",
+    "AIM",
+    "FLUX",
+    "CDT",
+    "NXGL",
+    "TWG",
+    "SNES",
+    "DCX",
+    "VHUB",
+    "KALA",
+    "GWH",
+    "CYAB",
+    "RIME",
+    "VNRX",
+    "ARAI",
+    "SLXN",
+    "EHTH"
   ]
 }
